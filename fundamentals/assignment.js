@@ -30,7 +30,7 @@ language = "php"; //never declare variable in this way */
 ////////////////////////////////////
 // Basic Operators
 // Math operators
-const now = 2037;
+/* const now = 2037;
 const ageJonas = now - 1991;
 const ageSarah = now - 2018;
 console.log(ageJonas, ageSarah);
@@ -57,4 +57,20 @@ console.log(ageSarah >= 18);
 
 const isFullAge = ageSarah >= 18;
 
-console.log(now - 1991 > now - 2018);
+console.log(now - 1991 > now - 2018); */
+
+const firstName = "Dinko";
+const job = "developer";
+const birthYear = 1990;
+const year = 2022;
+
+const dinko =
+  "I am " + firstName + ", a " + (year - birthYear) + "years old" + job + "!";
+console.log(dinko);
+//template literals
+const DinkoNew = "I am ${firstName}";
+console.log(DinkoNew);
+
+console.log("String \n\
+multiple \n\
+lines");
