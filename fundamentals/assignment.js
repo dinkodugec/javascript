@@ -101,7 +101,7 @@ console.log(century); */
 // Type Conversion and Coercion
 
 // type conversion
-const inputYear = "1991";
+/* const inputYear = "1991";
 console.log(Number(inputYear), inputYear);
 number() - //convert strings to number
   console.log(Number(inputYear) + 18);
@@ -123,3 +123,4 @@ let n = "1" + 1; // '11'
 n = n - 1;
 (" operator alwasy triger to number");
 console.log(n);
+ */
