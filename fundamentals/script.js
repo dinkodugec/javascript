@@ -40,7 +40,7 @@ if (favourite !== 23) console.log("Why not 23?");
  */
 
 // Logical Operators
-const hasDriversLicense = true; // A
+/* const hasDriversLicense = true; // A
 const hasGoodVision = true; // B
 
 console.log(hasDriversLicense && hasGoodVision);
@@ -60,4 +60,30 @@ if (hasDriversLicense && hasGoodVision && !isTired) {
   console.log("Sarah is able to drive!");
 } else {
   console.log("Someone else should drive...");
+}
+ */
+
+const teamDolphins = 96 + 108 + 89;
+console.log(teamDolphins);
+const teamKoalas = 88 + 91 + 110;
+console.log(teamKoalas);
+
+const avarageDolphins = teamDolphins / 3;
+console.log(avarageDolphins);
+
+const avarageKoalas = teamKoalas / 3;
+console.log(avarageKoalas);
+
+if (avarageDolphins > avarageKoalas && avarageDolphins > 100) {
+  console.log("Dolphins are better");
+} else if (avarageDolphins < avarageKoalas && avarageDolphins > 100) {
+  console.log("Koalas is better");
+} else if (
+  avarageDolphins == avarageKoalas &&
+  avarageDolphins > 100 &&
+  avarageKoalas > 100
+) {
+  console.log("they are good");
+} else {
+  console.log("no one win");
 }
