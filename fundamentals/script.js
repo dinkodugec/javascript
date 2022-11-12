@@ -133,7 +133,7 @@ if (day === "monday") {
  */
 
 // The Conditional (Ternary) Operator
-const age = 23;
+/* const age = 23;
 // age >= 18 ? console.log('I like to drink wine 🍷') : console.log('I like to drink water 💧');
 
 const drink = age >= 18 ? "wine 🍷" : "water 💧";
@@ -147,4 +147,35 @@ if (age >= 18) {
 }
 console.log(drink2);
 
-console.log(`I like to drink ${age >= 18 ? "wine 🍷" : "water 💧"}`);
+console.log(`I like to drink ${age >= 18 ? "wine 🍷" : "water 💧"}`); //expression - produce value
+
+const bill = 275;
+
+const tip = bill <= 300 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+console.log(
+  `The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`
+);
+ */
+
+// Functions
+function logger() {
+  console.log("My name is Jonas");
+}
+
+// calling / running / invoking function
+logger();
+logger();
+logger();
+
+function fruitProcessor(apples, oranges) {
+  const juice = `Juice with ${apples} apples and ${oranges} oranges.`;
+  return juice;
+}
+
+const appleJuice = fruitProcessor(5, 0);
+console.log(appleJuice);
+
+const appleOrangeJuice = fruitProcessor(2, 4);
+console.log(appleOrangeJuice);
+
+const num = Number("23");
