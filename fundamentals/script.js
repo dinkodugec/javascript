@@ -185,7 +185,7 @@ const num = Number("23");
 // Function Declarations vs. Expressions
 
 // Function declaration
-function calcAge1(birthYeah) {
+/* function calcAge1(birthYeah) {
   return 2037 - birthYeah;
 }
 const age1 = calcAge1(1991);
@@ -212,4 +212,18 @@ const yearsUntilRetirement = (birthYeah, firstName) => {
 };
 
 console.log(yearsUntilRetirement(1991, "Jonas"));
-console.log(yearsUntilRetirement(1980, "Bob"));
+console.log(yearsUntilRetirement(1980, "Bob")); */
+
+// Functions Calling Other Functions
+function cutFruitPieces(fruit) {
+  return fruit * 4;
+}
+
+function fruitProcessor(apples, oranges) {
+  const applePieces = cutFruitPieces(apples);
+  const orangePieces = cutFruitPieces(oranges);
+
+  const juice = `Juice with ${applePieces} piece of apple and ${orangePieces} pieces of orange.`;
+  return juice;
+}
+console.log(fruitProcessor(2, 3));
