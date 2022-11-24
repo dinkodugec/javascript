@@ -230,7 +230,7 @@ console.log(fruitProcessor(2, 3));
  */
 
 // Introduction to Arrays
-const friend1 = "Michael";
+/* const friend1 = "Michael";
 const friend2 = "Steven";
 const friend3 = "Peter";
 
@@ -304,3 +304,17 @@ console.log(friends.includes(23));
 if (friends.includes("Steven")) {
   console.log("You have a friend called Steven");
 }
+ */
+
+const calcTip = function (bills) {
+  return bills >= 50 && bills <= 300 ? bills * 0.15 : bills * 0.2;
+};
+
+const bills = [125, 555, 44];
+
+const tipps = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+console.log(tipps);
+
+const totals = [bills[0] + tipps[0], bills[1] + tipps[1], bills[2] + tipps[2]];
+
+console.log(bills, tipps, totals);
