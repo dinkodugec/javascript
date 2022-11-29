@@ -320,7 +320,7 @@ const totals = [bills[0] + tipps[0], bills[1] + tipps[1], bills[2] + tipps[2]];
 console.log(bills, tipps, totals); */
 
 // Introduction to Objects
-/* const jonasArray = [
+/*  const jonasArray = [
   "Jonas",
   "Schmedtmann",
   2037 - 1991,
@@ -334,7 +334,7 @@ const jonas = {
   age: 2037 - 1991,
   job: "teacher",
   friends: ["Michael", "Peter", "Steven"],
-}; */
+};  */
 
 // Dot vs. Bracket Notation
 const jonas = {
@@ -346,8 +346,8 @@ const jonas = {
 };
 console.log(jonas);
 
-console.log(jonas.lastName);
-console.log(jonas["lastName"]);
+console.log(jonas.lastName); //dot notation in objects
+console.log(jonas["lastName"]); //bracket notation
 
 const nameKey = "Name";
 console.log(jonas["first" + nameKey]);
@@ -375,4 +375,71 @@ console.log(jonas);
 // "Jonas has 3 friends, and his best friend is called Michael"
 console.log(
   `${jonas.firstName} has ${jonas.friends.length} friends, and his best friend is called ${jonas.friends[0]}`
+);
+
+// Object Methods
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  birthYeah: 1991,
+  job: "teacher",
+  friends: ["Michael", "Peter", "Steven"],
+  hasDriversLicense: true,
+
+  // calcAge: function (birthYeah) {
+  //   return 2037 - birthYeah;
+  // }
+
+  // calcAge: function () {
+  //   // console.log(this);
+  //   return 2037 - this.birthYeah;
+  // }
+
+  calcAge: function () {
+    this.age = 2037 - this.birthYeah; //this point to object , in this case jonas object
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      jonas.job
+    }, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`;
+  },
+};
+
+console.log(jonas.calcAge(1991)); //dot notation in objects
+console.log(jonas["calcAge"](1991)); //bracket notation
+
+console.log(jonas.calcAge());
+
+// Challenge
+// "Jonas is a 46-year old teacher, and he has a driver's license"
+console.log(jonas.getSummary());
+
+const Mark = {
+  fullname: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcCMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const John = {
+  fullname: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcCMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+Mark.calcCMI(); //object call the method
+console.log(Mark.bmi);
+
+console.log(
+  `${Mark.fullname} is ${Mark.bmi} and it is heigher then ${John.fullname}, whic is ${John.bmi}`
 );
